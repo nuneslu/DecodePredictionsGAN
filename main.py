@@ -161,7 +161,7 @@ def classify_images():
 
 def generate_message_from_encode(encode):
     encode_pred = [ pred for pred, label in encode ]
-    print(encode_pred)
+    print(f'\n{encode_pred}')
     gen = generator(input_size=14, n_class=28*28)
     checkpoint = torch.load('./gan_pretrainedgenerator_emnist.pt', map_location=torch.device('cpu'))
 

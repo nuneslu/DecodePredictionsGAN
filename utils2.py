@@ -27,3 +27,18 @@ def encode_to_one_hot(encode):
     integer_encoded = integer_encoded.reshape(len(integer_encoded), 1)
     one_hot_encoded = onehot_encoder.fit_transform(integer_encoded)
     print(one_hot_encoded)
+
+def encode_one_hot_tf(encode):
+    depth = size(encode)
+
+    one_hot_vec = tf.onehot(encode_num, depth)
+
+    return one_hot_vector
+
+def encode_one_hot_torch(encode):
+    size = len(encode)
+
+    a = torch.from_numpy(encode)
+    one_hot_vector = torch.nn.functional.one_hot(a)
+
+    return one_hot_vetor
